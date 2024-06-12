@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        html {
+            margin: 0 auto;
+            background-image: url(telaLogin.png);
+        }
+        .container {
+            margin-top: 200px;
+            padding: 50px 80px;
+            background-color: #b92632c0;
+            box-shadow: 0 0 10px black;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 25px;
+            width: 400px;
+        }
+        .container h2 {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .container input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .container button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0446aa;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container .link {
+            color: #37c6ff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cadastro-container" style="display: none;">
+        <h2>Criar uma conta</h2>
+        <input type="text" id="cadastro-username" placeholder="Nome de Usuário" required>
+        <input type="email" id="cadastro-email" placeholder="Email" required>
+        <br>
+        <input type="password" id="cadastro-senha" placeholder="Senha" required>
+        <input type="password" id="cadastro-confirmarSenha"  placeholder="Confirmar Senha" required>
+        <button onclick="criarConta()">Criar conta</button>
+        <p>Já possui uma conta? <span class="link" onclick="alternar()">Entrar</span></p>
+    </div>
+</body>
+</html>
