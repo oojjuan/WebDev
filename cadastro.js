@@ -32,7 +32,7 @@ function entrar() {
 
     if (email === emailArmazenado && senha === senhaArmazenada) {
         alert('Login realizado com sucesso!')
-        window.location.href = 'pilotos.html';
+        window.location.href = 'corridas.html';
     } else {
         alert('Email ou senha incorretos');
     }
