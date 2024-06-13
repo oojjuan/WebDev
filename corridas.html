@@ -58,6 +58,8 @@
             margin: auto;
             margin-top: 40px;
             max-width: 1200px;
+            padding-left: 25px;
+            padding-right: 25px;
             text-align: center;
             border: 4px solid black;
             border-radius: 20px;
@@ -78,7 +80,7 @@
             position: relative;
             padding: 20px;
         }
-        .proximo, .ultimo {
+        .proximo, .anterior {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -88,6 +90,15 @@
         padding: 10px;
         cursor: pointer;
         z-index: 1000;
+        }
+        .oculto {
+            display: none;
+        }
+        .anterior {
+            left: 10px;
+        }
+        .proximo {
+            right: 10px;
         }
     </style>
 </head>
@@ -104,19 +115,46 @@
     
     <div class="carrossel">
         <h1>Próximas corridas</h1>
+<!--Corrida 1-->
         <div class="carrossel-interior">
-            <div class="carrossel-corrida" active>
-                <div class="carrossel-textoEsquerda">
+            <div class="carrossel-corrida oculto">
+                <div class="carrossel-textoEsquerda" >
                     <h1>Portland International Raceway</h1>
                 </div>
                 <img src="portland.png" alt="Portland Foto">
                 <div class="carrossel-textoDireita">
+                    <h2>DIAS: 29/30 DE JUNHO</h2>
                     <p>Tamanho do circuito: 3.221km</p>
-                    <p>Voltas: 28</p>  
+                    <p>Curvas: 12</p>
+                </div>
+            </div>
+<!--Corrida 2-->
+            <div class="carrossel-corrida" >
+                <div class="carrossel-textoEsquerda">
+                    <h1>ExCel London</h1>
+                </div>
+                <img src="londres.png" alt="Londres Foto">
+                <div class="carrossel-textoDireita">
+                    <h2>DIAS: 20/21 DE JULHO</h2>
+                    <p>Tamanho do circuito: 2.09km</p>
+                    <p>Curvas: 20</p>
+                </div>
+            </div>
+<!--Corrida 3-->
+            <div class="carrossel-corrida oculto" >
+                <div class="carrossel-textoEsquerda">
+                    <h1>Shanghai International Circuit</h1>
+                </div>
+                <img src="xangai.png" alt="xangai Foto">
+                <div class="carrossel-textoDireita">
+                    <h2>DIAS: 25/26 DE MAIO</h2>
+                    <p>Tamanho do circuito: 3.051</p>
                     <p>Curvas: 12</p>
                 </div>
             </div>
         </div>
+        <button class="proximo" onclick="alternarSlide(-1)">></button>
+        <button class="anterior" onclick="alternarSlide(1)"><</button>
     </div>
 </body>
 </html>
